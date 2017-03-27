@@ -362,7 +362,7 @@ Item {
                 //console.log("preview show called: accepted...");
 
                 //used to initialize windows previews buffers from task to task
-                visible = false;
+                visible = true;
                 activeItem = taskItem;
                 toolTipDelegate.parentTask = taskItem;
 
@@ -373,7 +373,7 @@ Item {
                     //root.signalDraggingState(true);
                 }
 
-                showPreviewWinTimer.start();
+              //  showPreviewWinTimer.start();
             }
         }
     }
@@ -381,11 +381,11 @@ Item {
     //! I cant find another way to fix the issue with window thumbnails
     //! there are many cases that not correct previews are shown are
     //! no previews in cases that they should
-    Timer {
+    /*Timer {
         id: showPreviewWinTimer
         interval: 50
         onTriggered: windowsPreviewDlg.visible = true;
-    }
+    }*/
 
     /////Window Previews/////////
 
